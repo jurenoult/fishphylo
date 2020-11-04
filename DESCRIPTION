@@ -5,9 +5,9 @@ Authors@R:
     person(given = "Julien",
            family = "Renoult",
            role = c("aut", "cre"),
-           email = "julien.renoult@cefe.cnrs.com"
+           email = "julien.renoult@cefe.cnrs.fr")
 Description: Import sequences from genebank, read new new sequences from fasta files, align and calculate phylogenetic trees.
-License:  use_gpl3_license()
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
