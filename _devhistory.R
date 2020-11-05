@@ -17,5 +17,8 @@ devtools::install() #install our package
 usethis::use_testthat() # explicit test of the code
 usethis::use_test("cb_taxa_gene")
 usethis::use_git(message = ":boom: test pf cb_taxa_gene ok")
-system("git remote add origin https://github.com/jurenoult/fishphylo.git")
-
+usethis::use_readme_rmd()
+rmarkdown::render("README.Rmd")
+usethis::use_build_ignore("README.html")
+usethis::use_git_ignore("README.html")
+usethis::use_git(message = ":pencil: Edit README")
