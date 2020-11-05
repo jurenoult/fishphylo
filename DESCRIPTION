@@ -14,5 +14,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Suggests: 
     testthat
-URL:https://github.com/jurenoult/fishphylo
-BugReports:https://github.com/jurenoult/fishphylo/issues
+URL: https://github.com/jurenoult/fishphylo
+BugReports: https://github.com/jurenoult/fishphylo/issues
