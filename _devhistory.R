@@ -8,6 +8,12 @@ usethis::use_git(message = ":bulb: Edit package metadata")
 usethis::use_package_doc()
 devtools::document()
 usethis::use_mit_license(name = "Nicolas Casajus")
-usethis::use_r("cb_taxa_gene")
+usethis::use_r("cb_taxa_gene") #generate the file of the corresponding
 devtools::load_all()
 usethis::use_git(message = ":boom: New fonctio - cb_taxa_gene")
+devtools::document() #generate the corresponding .Rd file (special file for R documentation) from this Roxygen2 header
+devtools::check() #check the integrity of the package
+devtools::install() #install our package
+usethis::use_testthat() # explicit test of the code
+usethis::use_test("cb_taxa_gene")
+usethis::use_git(message = ":boom: test pf cb_taxa_gene ok")
