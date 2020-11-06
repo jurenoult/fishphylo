@@ -1,18 +1,15 @@
 Package: fishphylo
-Title: Analyses of DNA Sequences
+Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Julien",
            family = "Renoult",
            role = c("aut", "cre"),
-           email = "julien.renoult@cefe.cnrs.fr")
-Description: Import sequences from genebank, read new new sequences from fasta files, align and calculate phylogenetic trees.
+           email = "julien.renoult@cefe.cnrs.com")
+Description: process DNA barcoding sequences
 License: MIT + file LICENSE
+ByteCompile: true
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-Suggests: 
-    testthat
-URL: https://github.com/jurenoult/fishphylo
-BugReports: https://github.com/jurenoult/fishphylo/issues
