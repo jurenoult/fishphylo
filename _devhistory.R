@@ -22,3 +22,9 @@ rmarkdown::render("README.Rmd")
 usethis::use_build_ignore("README.html")
 usethis::use_git_ignore("README.html")
 usethis::use_git(message = ":pencil: Edit README")
+
+usethis::use_r("write_fasta")
+devtools::document()
+usethis::use_package("rentrez")
+
+

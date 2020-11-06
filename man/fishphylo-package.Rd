@@ -8,6 +8,14 @@
 \description{
 Import sequences from genebank, read new new sequences from fasta files, align and calculate phylogenetic trees.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/jurenoult/fishphylo}
+  \item Report bugs at \url{https://github.com/jurenoult/fishphylo/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Julien Renoult \email{julien.renoult@cefe.cnrs.fr}
 
