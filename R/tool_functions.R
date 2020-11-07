@@ -13,7 +13,7 @@
 #' write_fasta(ls_fasta, "pomadri_COI_seqs.fasta")
 #'
 write_fasta <- function(fasta_ls,name = "fasta_seq"){
-  write (fasta_ls,here::here("output",name),sep="\n")
+  write (fasta_ls,here::here("data",name),sep="\n")
 }
 
 #' read fasta file from output directory
@@ -29,5 +29,7 @@ write_fasta <- function(fasta_ls,name = "fasta_seq"){
 #' @examples
 #' fas_file <- read_fasta("bueniaETpomadri_COI_seqs.fasta")
 read_fasta <- function(name){
-  read.fasta(here::here("output",name), as.string = TRUE)
+  read.fasta(here::here("data",name), as.string = TRUE)
 }
+
+
