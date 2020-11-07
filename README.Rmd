@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of fishphylo is to import sequence data from GenBank and from Fasta files et construct phylogenetic trees.
+The goal of fishphylo is to import sequence data from GenBank and from Fasta files and build basic phylogenetic trees.
 
 ## Installation
 
@@ -36,7 +36,7 @@ library(fishphylo)
 ```
 
 indicate taxa and the gene name
-```{r}
+```{r,results = 'hide'}
 ls_tax_gen <- cb_taxa_gene(c("Buenia","Pomatoschistus adriaticus"),"COI")
 ```
 

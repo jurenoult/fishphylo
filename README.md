@@ -8,7 +8,7 @@
 <!-- badges: end -->
 
 The goal of fishphylo is to import sequence data from GenBank and from
-Fasta files et construct phylogenetic trees.
+Fasta files and build basic phylogenetic trees.
 
 ## Installation
 
@@ -32,7 +32,6 @@ indicate taxa and the gene name
 
 ``` r
 ls_tax_gen <- cb_taxa_gene(c("Buenia","Pomatoschistus adriaticus"),"COI")
-#> ""
 ```
 
 write a fasta file

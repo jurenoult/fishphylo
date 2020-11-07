@@ -25,7 +25,10 @@ usethis::use_git(message = ":pencil: Edit README")
 
 usethis::use_r("tool_functions")
 devtools::document()
-devtools::install_deps()
-rmarkdown::render("README.Rmd")
 
+# quand on modifie le README.Rmd
+devtools::install_deps() # nécessaire pour faire tourner le Rmd
+rmarkdown::render("README.Rmd") # pour updater le .md à partir du .Rmd
 
+usethis::use_build_ignore("README.html")
+usethis::use_git_ignore("README.html")
