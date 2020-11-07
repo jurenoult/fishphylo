@@ -31,11 +31,12 @@ devtools::load_all()
 
 # quand on modifie le README.Rmd
 devtools::install_deps() # nécessaire pour faire tourner le Rmd
+devtools::load_all()
 rmarkdown::render("README.Rmd") # pour updater le .md à partir du .Rmd
 
 usethis::use_build_ignore("README.html")
 usethis::use_git_ignore("README.html")
 
 #faire un commit à la main puis un push
-usethis::use_git(message = ":pencil: Edit README")
+usethis::use_git(message = "add all functions")
 system("git push")

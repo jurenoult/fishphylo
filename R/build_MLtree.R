@@ -7,6 +7,7 @@
 #' @export
 #' @import phangorn
 #' @import stringr
+#' @import ape
 #'
 #' @examples
 build_MLtree <- function(fas_align,output_name){
@@ -19,7 +20,7 @@ build_MLtree <- function(fas_align,output_name){
   dna_dist <- dist.ml(fas_align, model="JC69")
   pom_NJ  <- NJ(dna_dist)
   fit <- pml(pom_NJ, fas_align)
-  fitJC <- optim.pml(fit, model = "JC", rearrangement = "stochastic")
+  fitJC <- optim.pml(fit, model = "JC", rearrangement = "stochastic",control = pml.control(trace=0))
   bs <- bootstrap.pml(fitJC, bs=500, optNni=TRUE, multicore=TRUE, control = pml.control(trace=0))
   tree <- plotBS(midpoint(fitJC$tree), bs, p = 50, "phylogram")
   write.tree(tree,"example.tree")

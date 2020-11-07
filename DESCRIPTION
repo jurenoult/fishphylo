@@ -20,6 +20,7 @@ Imports:
     rentrez,
     here,
     seqinr,
-    stringr
-    
+    stringr,
+    phangorn,
+    ape
     

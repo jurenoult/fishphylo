@@ -38,7 +38,7 @@ library(fishphylo)
 
 You will need to install the package msa that is available on Bioconductor. You can install it using the following commands:
 
-```{r}
+```{r,evol=FALSE}
 if (!requireNamespace("BiocManager", quietly=TRUE))
 install.packages("BiocManager")
 BiocManager::install("msa")

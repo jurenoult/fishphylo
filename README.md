@@ -19,7 +19,7 @@ You can install the development version from
 # install.packages("devtools")
 devtools::install_github("jurenoult/fishphylo")
 #> Using github PAT from envvar GITHUB_PAT
-#> Skipping install of 'fishphylo' from a github remote, the SHA1 (9767285c) has not changed since last install.
+#> Skipping install of 'fishphylo' from a github remote, the SHA1 (9cb463cc) has not changed since last install.
 #>   Use `force = TRUE` to force installation
 ```
 
@@ -44,7 +44,7 @@ BiocManager::install("msa")
 #> Installing package(s) 'msa'
 #> 
 #> The downloaded binary packages are in
-#>  /var/folders/w5/jhktndf97sb8mxkgwmcbjy400000gq/T//RtmpfQDi3G/downloaded_packages
+#>  /var/folders/w5/jhktndf97sb8mxkgwmcbjy400000gq/T//RtmpSfg9Uw/downloaded_packages
 library(msa)
 ```
 
@@ -114,50 +114,18 @@ fas <- align_fasta("combined_seq.fasta")
 Plot a NJ tree based on JC69 distance matrix, with bootstraps
 
 ``` r
-NJ_tree <- build_NJtree(fas,"example.tre")
+NJ_tree <- build_MLtree(fas,"example.tre")
 #> negative edges length changed to 0!
-#> optimize edge weights:  -1454.906 --> -1452.667 
-#> optimize edge weights:  -1452.667 --> -1452.667 
-#> optimize topology:  -1452.667 --> -1451.396 
-#> optimize topology:  -1451.396 --> -1451.396 
-#> 1 
-#> optimize edge weights:  -1451.396 --> -1451.396 
-#> optimize topology:  -1451.396 --> -1451.396 
-#> 0 
-#> [1] "Ratchet iteration  1 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  2 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  3 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  4 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  5 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  6 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  7 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  8 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  9 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  10 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  11 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  12 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  13 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  14 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  15 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  16 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  17 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  18 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  19 , best pscore so far: -1451.39562913874"
-#> [1] "Ratchet iteration  20 , best pscore so far: -1451.39562913874"
-#> optimize edge weights:  -1451.396 --> -1451.396 
-#> optimize topology:  -1451.396 --> -1451.396 
-#> 0 
-#> optimize edge weights:  -1451.396 --> -1451.396
-#> Warning in if (!is.na(tmp)) {: la condition a une longueur > 1 et seul le premier élément est utilisé
-#> Warning in if (tmp == 1) {: la condition a une longueur > 1 et seul le premier élément est utilisé
-#> Warning in if (tmp == 2) do_rearr <- extras$rearrangement %in% c("NNI", : la condition a une longueur > 1 et
-#> seul le premier élément est utilisé
+#> Warning in if (!is.na(tmp)) {: la condition a une longueur > 1 et seul le premier
+#> élément est utilisé
+#> Warning in if (tmp == 1) {: la condition a une longueur > 1 et seul le premier
+#> élément est utilisé
+#> Warning in if (tmp == 2) do_rearr <- extras$rearrangement %in% c("NNI", : la
+#> condition a une longueur > 1 et seul le premier élément est utilisé
 ```
 
 <img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
 
 ``` r
-plot_tree(NJ_tree)
+#plot_tree(NJ_tree)
 ```
-
-<img src="man/figures/README-unnamed-chunk-10-2.png" width="100%" />
