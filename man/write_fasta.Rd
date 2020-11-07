@@ -2,7 +2,7 @@
 % Please edit documentation in R/tool_functions.R
 \name{write_fasta}
 \alias{write_fasta}
-\title{write fasta file in output directory}
+\title{Write fasta file in output directory}
 \usage{
 write_fasta(fasta_ls, name = "fasta_seq")
 }
@@ -15,7 +15,7 @@ write_fasta(fasta_ls, name = "fasta_seq")
 write a file with .fasta extension
 }
 \description{
-write fasta file in output directory
+Write fasta file in output directory
 }
 \examples{
 ls_tax_gen <- cb_taxa_gene("Pomatoschistus adriaticus","COI")

@@ -2,7 +2,7 @@
 % Please edit documentation in R/tool_functions.R
 \name{read_fasta}
 \alias{read_fasta}
-\title{read fasta file from output directory}
+\title{Read fasta file from output directory}
 \usage{
 read_fasta(name)
 }
@@ -15,7 +15,7 @@ read_fasta(name)
 an object reading fasta sequences
 }
 \description{
-read fasta file from output directory
+Read fasta file from output directory
 }
 \examples{
 fas_file <- read_fasta("bueniaETpomadri_COI_seqs.fasta")

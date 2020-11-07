@@ -2,7 +2,7 @@
 % Please edit documentation in R/tool_functions.R
 \name{disp_access}
 \alias{disp_access}
-\title{display accession number and species name of a fasta file}
+\title{Display accession number and species name of a fasta file}
 \usage{
 disp_access(file)
 }
@@ -13,5 +13,5 @@ disp_access(file)
 display a list of accessions with the index
 }
 \description{
-display accession number and species name of a fasta file
+Display accession number and species name of a fasta file
 }

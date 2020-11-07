@@ -1,4 +1,4 @@
-#' write fasta file in output directory
+#' Write fasta file in output directory
 #'
 #' @param fasta_ls list of fasta sequence produced by build_fasta function
 #' @param name name of output file
@@ -16,7 +16,9 @@ write_fasta <- function(fasta_ls,name = "fasta_seq"){
   write (fasta_ls,here::here("data",name),sep="\n")
 }
 
-#' read fasta file from output directory
+
+
+#' Read fasta file from output directory
 #'
 #' @param file .fas file located in the data directory
 #' @param name name of output file
@@ -33,7 +35,8 @@ read_fasta <- function(name){
 }
 
 
-#' display accession number and species name of a fasta file
+
+#' Display accession number and species name of a fasta file
 #'
 #' @param file an object output by function read_fasta
 #'
@@ -49,6 +52,21 @@ disp_access <- function(file){
     ls_access=c(ls_access, paste0(i,": ", access ,"\n"))
   }
   cat(ls_access)
+}
+
+
+#' Read a fasta file and align the sequences
+#'
+#' @param file a fasta file located in the data folder
+#'
+#' @return a sequence alignment (msa)
+#' @export
+#'
+#' @examples
+align_fasta <- function(file){
+  fas <- readDNAStringSet(here::here("data",file))
+  fas_align <- msa(fas,"ClustalW") # align with ClustalW
+  return(fas_align)
 }
 
 
