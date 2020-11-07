@@ -15,3 +15,19 @@
 write_fasta <- function(fasta_ls,name = "fasta_seq"){
   write (fasta_ls,here::here("output",name),sep="\n")
 }
+
+#' read fasta file from output directory
+#'
+#' @param file .fas file located in the "R" directory
+#' @param name name of output file
+#'
+#' @return an object reading fasta sequences
+#' @export
+#' @import here
+#' @import seqinr
+#'
+#' @examples
+#' fas_file <- read_fasta("bueniaETpomadri_COI_seqs.fasta")
+read_fasta <- function(name){
+  read.fasta(here::here("output",name), as.string = TRUE)
+}
