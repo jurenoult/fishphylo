@@ -24,14 +24,13 @@ The goal of fishphylo is to import sequence data from GenBank and from Fasta fil
 
 You can install the development version from [GitHub](https://github.com/) with:
 
-``` r
+``` {r, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("jurenoult/fishphylo")
 ```
 ## Example 1: import sequences from GenBank
 
 Load this project as a library:
-
 ```{r example}
 library(fishphylo)
 ```
@@ -44,6 +43,6 @@ ls_tax_gen <- cb_taxa_gene(c("Buenia","Pomatoschistus adriaticus"),"COI")
 write a fasta file
 ```{r}
 ls_fasta <-build_fasta(ls_tax_gen)
-write_fasta(bueniaETpomadri_COI_seqs, "bueniaETpomadri_COI_seqs.fasta", sep="\n")
+write_fasta(ls_fasta,"bueniaETpomadri_COI_seqs.fasta")
 ```
 

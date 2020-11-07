@@ -17,5 +17,5 @@ Suggests:
 URL: https://github.com/jurenoult/fishphylo
 BugReports: https://github.com/jurenoult/fishphylo/issues
 Imports: 
-    rentrez
+    rentrez,
     here

@@ -25,6 +25,7 @@ usethis::use_git(message = ":pencil: Edit README")
 
 usethis::use_r("tool_functions")
 devtools::document()
-usethis::use_package("rentrez")
+devtools::install_deps()
+rmarkdown::render("README.Rmd")
 
 
