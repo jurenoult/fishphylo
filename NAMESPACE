@@ -2,9 +2,11 @@
 
 export(build_fasta)
 export(cb_taxa_gene)
+export(disp_access)
 export(read_fasta)
 export(write_fasta)
 import(here)
 import(seqinr)
+import(stringr)
 importFrom(rentrez,entrez_fetch)
 importFrom(rentrez,entrez_search)

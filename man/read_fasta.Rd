@@ -9,7 +9,7 @@ read_fasta(name)
 \arguments{
 \item{name}{name of output file}
 
-\item{file}{.fas file located in the "R" directory}
+\item{file}{.fas file located in the data directory}
 }
 \value{
 an object reading fasta sequences

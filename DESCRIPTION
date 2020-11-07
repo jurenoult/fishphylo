@@ -19,5 +19,7 @@ BugReports: https://github.com/jurenoult/fishphylo/issues
 Imports: 
     rentrez,
     here,
-    seqinr
+    seqinr,
+    stringr
+    
     
