@@ -2,5 +2,7 @@
 
 export(build_fasta)
 export(cb_taxa_gene)
+export(write_fasta)
+import(here)
 importFrom(rentrez,entrez_fetch)
 importFrom(rentrez,entrez_search)

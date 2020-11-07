@@ -23,7 +23,7 @@ usethis::use_build_ignore("README.html")
 usethis::use_git_ignore("README.html")
 usethis::use_git(message = ":pencil: Edit README")
 
-usethis::use_r("write_fasta")
+usethis::use_r("tool_functions")
 devtools::document()
 usethis::use_package("rentrez")
 

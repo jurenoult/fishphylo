@@ -8,7 +8,7 @@
 <!-- badges: end -->
 
 The goal of fishphylo is to import sequence data from GenBank and from
-Fasta files et construct phylogenetic trees
+Fasta files et construct phylogenetic trees.
 
 ## Installation
 
@@ -20,14 +20,24 @@ You can install the development version from
 devtools::install_github("jurenoult/fishphylo")
 ```
 
-## Example
+## Example 1: import sequences from GenBank
 
-This is a basic example which shows you how to solve a common problem:
+Load this project as a library:
 
 ``` r
 library(fishphylo)
-## basic example code
-fishphylo::cb_taxa_gene(c("Gobius","Pomatoschistus"),"COI")
+```
+
+indicate taxa and the gene name
+
+``` r
+ls_tax_gen <- cb_taxa_gene(c("Buenia","Pomatoschistus adriaticus"),"COI")
 #> ""
-#> [1] "(Gobius [Organism] OR Pomatoschistus [Organism]) AND COI[Gene]"
+```
+
+write a fasta file
+
+``` r
+ls_fasta <-build_fasta(ls_tax_gen)
+write_fasta(ls_fasta,"bueniaETpomadri_COI_seqs.fasta")
 ```
