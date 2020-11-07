@@ -36,8 +36,9 @@ library(fishphylo)
 ```
 
 indicate taxa and the gene name
-```{r,results = 'hide'}
+```{r}
 ls_tax_gen <- cb_taxa_gene(c("Buenia","Pomatoschistus adriaticus"),"COI")
+ls_tax_gen
 ```
 
 write a fasta file

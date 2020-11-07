@@ -32,6 +32,9 @@ indicate taxa and the gene name
 
 ``` r
 ls_tax_gen <- cb_taxa_gene(c("Buenia","Pomatoschistus adriaticus"),"COI")
+#> ""
+ls_tax_gen
+#> [1] "(Buenia [Organism] OR Pomatoschistus adriaticus [Organism]) AND COI[Gene]"
 ```
 
 write a fasta file
