@@ -4,7 +4,7 @@
 \alias{plot_tree}
 \title{plot a phylogenetic tree}
 \usage{
-plot_tree(tree)
+plot_tree(tree, root)
 }
 \arguments{
 \item{tree}{object output by build_NJtree function}

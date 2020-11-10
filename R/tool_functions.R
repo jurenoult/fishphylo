@@ -46,9 +46,13 @@ read_fasta <- function(name){
 #'
 #' @examples
 disp_access <- function(file){
+  if (sapply(strsplit(attr(file[[1]],"Annot"), " "), length) == 1) {end <- 1}
+  else if (sapply(strsplit(attr(file[[1]],"Annot"), " "), length) == 2) {end <- 2}
+  else {end <- 3}
   ls_access = ""
   for (i in 1:length(file)){
-    access <- str_remove(word(attr(file[[i]],"Annot"), 1,3, sep=" "),"[>]")
+    access <- word(attr(file[[i]],"Annot"), 1,end, sep=" ")
+    access <- str_remove(access,"[>]")
     ls_access=c(ls_access, paste0(i,": ", access ,"\n"))
   }
   cat(ls_access)
@@ -65,8 +69,30 @@ disp_access <- function(file){
 #' @examples
 align_fasta <- function(file){
   fas <- readDNAStringSet(here::here("data",file))
-  fas_align <- msa(fas,"ClustalW") # align with ClustalW
+  fas_align <- msa(fas,"ClustalW",maxiters = 100) # align with ClustalW
   return(fas_align)
+}
+
+
+#' rename fasta object
+#'
+#' @param fasta_ls fasta object
+#'
+#' @return the same fasta object but with new names
+#' @export
+#'
+#' @examples
+fas_name <- function(fasta_ls){
+  names = ""
+  for (i in 1:length(fasta_ls)){
+    if (sapply(strsplit(attr(fasta_ls[[i]],"Annot"), " "), length) == 1) {end <- 1}
+    else if (sapply(strsplit(attr(fasta_ls[[i]],"Annot"), " "), length) == 2) {end <- 2}
+    else {end <- 3}
+    access <- word(attr(fasta_ls[[i]],"Annot"), 1 ,end, sep=" ")
+    access <- str_remove(access,"[>]")
+    names=c(names,access)
+  }
+return(names[-1])
 }
 
 

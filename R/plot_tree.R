@@ -7,8 +7,8 @@
 #' @export
 #'
 #' @examples
-plot_tree <- function(tree){
-  plot(tree, type = "phylogram", use.edge.length = FALSE,
+plot_tree <- function(tree, root){
+  plot(root(tree,root), type = "phylogram", use.edge.length = FALSE,
        node.pos = NULL, show.tip.label = TRUE, show.node.label = FALSE,
        edge.color = "black", edge.width = 0.5, edge.lty = 1, font = 2,
        cex = 0.3, adj = NULL, srt = 0, no.margin = FALSE,

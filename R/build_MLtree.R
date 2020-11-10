@@ -13,10 +13,6 @@
 build_MLtree <- function(fas_align,output_name){
   fas_align <- msaConvert(fas_align,"phangorn::phyDat") # convert the msa object as a phyDat object compatible with phangorn
   # rename accession names to keep only the accession number and species name (the first 3 word of the name attribute of a fasta sequence)
-  names <- attributes(fas_align)$names
-  for (i in 1:length(names)){
-    attributes(fas_align)$names[i] <- word(names[i], 1,3, sep=" ")
-  }
   dna_dist <- dist.ml(fas_align, model="JC69")
   pom_NJ  <- NJ(dna_dist)
   fit <- pml(pom_NJ, fas_align)
